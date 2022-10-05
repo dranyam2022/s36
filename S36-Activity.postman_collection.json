@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "f6994c1a-6d87-49b4-88b1-659034e54e65",
+		"name": "S36-Activity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23632523"
+	},
+	"item": [
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Visit Taiwan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Visit London",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Go to Singapore",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "go to New York",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/633d2c82a3dba3bfa26d19bd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"633d2c82a3dba3bfa26d19bd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Status",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Go to Singapore",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "go to New York",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/633d37963876a1bc99f1d07c/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"633d37963876a1bc99f1d07c",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
